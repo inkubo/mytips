@@ -1,0 +1,177 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Check"
+            android:id="@+id/textView"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="14dp"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/check"
+            android:layout_alignTop="@+id/textView"
+            android:layout_toRightOf="@+id/textView"
+            android:layout_marginLeft="24dp"
+            android:numeric="decimal"
+            android:gravity="left"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Tax %"
+            android:id="@+id/textView2"
+            android:layout_below="@+id/check"
+            android:layout_alignLeft="@+id/textView"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/tax"
+            android:layout_below="@+id/check"
+            android:layout_alignLeft="@+id/check"
+            android:numeric="decimal"
+            android:layout_alignParentRight="false"
+            android:gravity="left"
+            android:text="7.5"
+            android:textAlignment="textEnd"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Tax"
+            android:id="@+id/textView22"
+            android:layout_below="@+id/tax"
+            android:layout_alignLeft="@+id/textView"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/taxAmount"
+            android:layout_below="@+id/tax"
+            android:layout_alignLeft="@+id/tax"
+            android:numeric="decimal"
+            android:layout_alignParentRight="false"
+            android:gravity="left"
+            android:text=""
+            android:textAlignment="textEnd"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Subtotal"
+            android:id="@+id/textView3"
+            android:layout_below="@+id/taxAmount"
+            android:layout_alignLeft="@+id/textView2"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/subTotal"
+            android:layout_alignTop="@+id/textView3"
+            android:layout_alignLeft="@+id/taxAmount"
+            android:numeric="decimal"
+            android:layout_alignParentRight="false"
+            android:gravity="left"/>
+
+    <!--  ################   tip    -->
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Tip %"
+            android:id="@+id/textView4"
+            android:layout_below="@+id/subTotal"
+            android:layout_alignLeft="@+id/textView3"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/tip"
+            android:layout_below="@+id/subTotal"
+            android:layout_alignLeft="@+id/subTotal"
+            android:numeric="decimal"
+            android:textAlignment="viewEnd"
+            android:gravity="left"/>
+
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Tip"
+            android:id="@+id/textView44"
+            android:layout_below="@+id/tip"
+            android:layout_alignLeft="@+id/textView44"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/tipAmount"
+            android:layout_below="@+id/tip"
+            android:layout_alignLeft="@+id/subTotal"
+            android:numeric="decimal"
+            android:textAlignment="viewEnd"
+            android:gravity="left"/>
+
+    <!--  ################ total      -->
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Total"
+            android:id="@+id/textView5"
+            android:layout_below="@+id/tipAmount"
+            android:layout_alignLeft="@+id/textView4"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/total"
+            android:layout_alignTop="@+id/textView5"
+            android:layout_alignLeft="@+id/tip"
+            android:textAlignment="textEnd"
+            android:numeric="decimal"
+            android:gravity="left"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calc"
+            android:id="@+id/btCalc"
+            android:layout_below="@+id/total"
+            android:layout_alignLeft="@+id/textView5"
+            android:layout_marginTop="20dp"
+            android:onClick="calcTip"/>
+</RelativeLayout>
